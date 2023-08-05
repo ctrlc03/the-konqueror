@@ -1,0 +1,24 @@
+{
+  "Endpoint": {
+    "Address": "127.0.0.1:9004",
+    "Name": "/result:/domain:/back",
+    "UUID": "b0e7756d-40b2-42d1-a482-0bff69e0eaad"
+  },
+  "GETResponse": {
+    "Content-Type": "application/json",
+    "Encoding-Type": "utf-8",
+    "Set-Cookie": "PHPSESSID=test",
+    "SpecialHeader": "SpecialTest"
+  },
+  "POSTResponse": {
+    "Content-Type": "application/json",
+    "Content-Length": "9001",
+    "Set-Cookie": "PHPSESSID=test"
+  },
+  "Options": {
+    "SleepTime": 10,
+    "APIAddress": "127.0.0.1:9002",
+    "404": "not_found.html",
+    "gRPCServerAddress": "127.0.0.1:9003"
+  }
+}

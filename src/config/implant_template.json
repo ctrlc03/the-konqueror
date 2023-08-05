@@ -1,0 +1,27 @@
+{
+  "GETRequest": {
+    "User-Agent": "The Konqueror v0.1.0",
+    "Accept": "*/*",
+    "Host": "thekonqueror.com",
+    "Cookie": "PHPSESSID=token",
+    "X-Requested-With": "XMLHttpRequest"
+  },
+  "POSTRequest": {
+    "User-Agent": "TheKonqueror v0.1.0",
+    "Content-Type": "application/json",
+    "Host": "localhost"
+  },
+  "Endpoint": {
+    "Address": "127.0.0.1:9004",
+    "Name": "/result:/domain:/back",
+    "UUID": "b0e7756d-40b2-42d1-a482-0bff69e0eaad"
+  },
+  "Options": {
+    "SleepTime": "10",
+    "Jitter": "5",
+    "KillDate": "2020-12-12 15:04:22",
+    "MaxRetry": "5",
+    "AESKey": "thekonqueror",
+    "HMACKey": "thekonqueror"
+  }
+}

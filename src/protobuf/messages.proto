@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package protomessages;
+option go_package = ".;protomessages";
+
+// Describes a UUID
+message UUID {
+    string value = 1;
+}
+
+// Describes a task
+message Task {
+    string type = 1;
+    repeated string arguments = 2;
+    string result = 3;
+    bool success = 4;
+    UUID listenerUUID = 5;
+    UUID implantUUID = 6;
+    UUID uuid = 7;
+    string date = 8;
+}
+
+// Describes an implant
+message Implant {
+    UUID uuid = 1;
+    string cwd = 2;
+    string os = 3;
+    string arch = 4;
+    int64 jitter = 5;
+    string userID = 6;
+    string hostname = 7;
+    int64 failedCheckIns = 8;
+    int64 PID = 9;
+    int64 PPID = 10;
+    int64 maxRetry = 11;
+    string username = 12;
+    int64 sleepTime = 13;
+    int64 killDate = 14;
+    UUID listenerUUID = 15;
+    string status = 16;
+    string type = 17;
+}
+
+message Username {
+    string username = 1;
+}
+
+// Service to get implant check-ins
+service GetImplantCheckIn {
+    rpc GetImplantCheckIn(Username) returns (stream Implant);
+}
+//
+service GetTaskForListener {
+    rpc GetTaskForListener(UUID) returns (stream Task);
+}
+
+service GetTaskResult {
+    rpc GetTaskResult(Username) returns(stream Task);
+}
